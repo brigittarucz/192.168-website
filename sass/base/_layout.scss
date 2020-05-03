@@ -33,6 +33,33 @@ html {
 
 // -----------//// PADDINGS ////-----------
 
+.form-group {
+    margin-top: 1.5rem;
+
+    &:last-of-type {
+        margin-bottom: 4rem;
+    }
+}
+
+.basic-label {
+    color: $pinegreen-col;
+}
+
+.basic-input {
+    background-color: transparent;
+    border: 0;
+    padding: 1rem 0;
+    color: white;
+    border-bottom: 1.5px solid $basicwhite-col;
+    width: 95%;
+
+    &::placeholder {
+        color: $basicwhite-col;
+    }
+}
+
+// -----------//// PADDINGS ////-----------
+
 section {
     padding: 1.5rem 2rem;
 }
@@ -194,7 +221,7 @@ p {
                     color: $basicwhite-col;
                 }
 
-                .text-3_regular {
+                .text-4_regular {
                     color: $whiteblueish-col;
                 }
 
@@ -290,6 +317,13 @@ p {
             * {
                 display: inline-block;
                 margin: auto;
+            }
+        }
+
+        form {
+
+            button {
+                margin-left: calc(50% - 8rem);
             }
         }
     }

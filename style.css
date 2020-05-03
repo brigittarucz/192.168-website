@@ -96,6 +96,24 @@ html {
   .link-regular:hover {
     cursor: pointer; }
 
+.form-group {
+  margin-top: 1.5rem; }
+  .form-group:last-of-type {
+    margin-bottom: 4rem; }
+
+.basic-label {
+  color: #669198; }
+
+.basic-input {
+  background-color: transparent;
+  border: 0;
+  padding: 1rem 0;
+  color: white;
+  border-bottom: 1.5px solid white;
+  width: 95%; }
+  .basic-input::placeholder {
+    color: white; }
+
 section {
   padding: 1.5rem 2rem; }
 
@@ -195,7 +213,7 @@ p {
       text-align: center; }
       .section__science-container article h2 {
         color: white; }
-      .section__science-container article .text-3_regular {
+      .section__science-container article .text-4_regular {
         color: #E3F4F6; }
       .section__science-container article .science-fact {
         margin: 7.5rem auto;
@@ -259,6 +277,8 @@ p {
     .section__referral .discount-card * {
       display: inline-block;
       margin: auto; }
+  .section__referral form button {
+    margin-left: calc(50% - 8rem); }
 
 .btn-white {
   margin: 1rem;
