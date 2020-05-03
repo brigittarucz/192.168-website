@@ -54,16 +54,20 @@
   font-family: "NotoSans Regular";
   font-size: 1.8rem; }
 
+.text-5_semibold {
+  font-family: "NotoSans Semibold";
+  font-size: 1.6rem; }
+
+.text-5_medium {
+  font-family: "NotoSans Medium";
+  font-size: 1.6rem; }
+
 .text-5_regular {
   font-family: "NotoSans Regular";
   font-size: 1.6rem; }
 
 .text-5_light {
   font-family: "NotoSans Light";
-  font-size: 1.6rem; }
-
-.text-5_semibold {
-  font-family: "NotoSans Semibold";
   font-size: 1.6rem; }
 
 *,
@@ -83,6 +87,15 @@ html {
 .no-display {
   display: none; }
 
+.link-regular {
+  all: unset;
+  text-decoration: underline;
+  color: #D8BDB5;
+  font-family: "NotoSans Semibold";
+  font-size: 1.8rem; }
+  .link-regular:hover {
+    cursor: pointer; }
+
 section {
   padding: 1.5rem 2rem; }
 
@@ -95,7 +108,7 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 1rem 0; }
+  padding: 2rem 0 1rem 0; }
 
 p {
   padding: 2rem 0; }
@@ -154,6 +167,98 @@ p {
 
 .section__science {
   background-color: #ECEAEB; }
+  .section__science-container {
+    margin: 6.75rem 0;
+    max-height: 1500px;
+    position: relative; }
+    .section__science-container .background-green {
+      position: absolute;
+      right: -2rem;
+      top: 0;
+      z-index: 0;
+      background: url("./assets/video-overlay.png");
+      background-size: cover;
+      width: 60%;
+      height: 100%; }
+    .section__science-container .background-nature {
+      position: absolute;
+      left: -2rem;
+      top: 30;
+      z-index: 0;
+      background: url("./assets/plants-bg.png");
+      width: 55%;
+      height: 95%; }
+    .section__science-container article {
+      padding: 4rem 0;
+      position: relative;
+      z-index: 1;
+      text-align: center; }
+      .section__science-container article h2 {
+        color: white; }
+      .section__science-container article .text-3_regular {
+        color: #E3F4F6; }
+      .section__science-container article .science-fact {
+        margin: 7.5rem auto;
+        outline: 1px solid white;
+        outline-offset: 1rem;
+        background-color: #ECEAEB;
+        width: 22rem;
+        height: 25rem;
+        padding: 3rem;
+        position: relative; }
+        .section__science-container article .science-fact .fact-icon {
+          z-index: 3;
+          position: absolute;
+          top: -4.5rem;
+          left: calc(50% - 4rem);
+          background-color: #20212B;
+          border: 1px solid white;
+          padding: 2rem;
+          display: inline-block;
+          border-radius: 5rem; }
+        .section__science-container article .science-fact .fact-icon img {
+          width: 4.5rem; }
+        .section__science-container article .science-fact .text-5_regular {
+          margin-top: 2rem;
+          text-align: left; }
+
+.section__referral {
+  background-color: #1B3236;
+  color: #E3F4F6; }
+  .section__referral .text-2_semibold {
+    color: white; }
+  .section__referral-header-wrapper {
+    background-image: url("./assets/marble-bg.png");
+    background-position: bottom;
+    background-size: cover;
+    margin: -2rem;
+    padding: 6rem 4rem; }
+  .section__referral-header-content {
+    border: 1px solid white;
+    outline-offset: 1rem;
+    padding: 1rem;
+    color: white;
+    text-align: center; }
+    .section__referral-header-content * {
+      text-shadow: 2px 3px 6px #000000;
+      padding: 0; }
+  .section__referral .discount-card {
+    width: 250px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 4rem 1fr; }
+    .section__referral .discount-card .text-5_light {
+      grid-column: 1/span 1; }
+    .section__referral .discount-card img {
+      width: 100%;
+      grid-row: 2/span 1;
+      grid-column: 1/span 1; }
+    .section__referral .discount-card .text-3_medium {
+      grid-row: 2/span 1;
+      grid-column: 2/span 1; }
+    .section__referral .discount-card * {
+      display: inline-block;
+      margin: auto; }
 
 .btn-white {
   margin: 1rem;
