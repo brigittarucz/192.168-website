@@ -1,3 +1,71 @@
+@font-face {
+  font-family: "NotoSans Bold";
+  src: url("./assets/fonts/NotoSans-Bold.ttf"); }
+
+@font-face {
+  font-family: "NotoSans Semibold";
+  src: url("./assets/fonts/NotoSans-SemiBold.ttf"); }
+
+@font-face {
+  font-family: "NotoSans Medium";
+  src: url("./assets/fonts/NotoSans-Medium.ttf"); }
+
+@font-face {
+  font-family: "NotoSans Regular";
+  src: url("./assets/fonts/NotoSans-Regular.ttf"); }
+
+@font-face {
+  font-family: "NotoSans Light";
+  src: url("./assets/fonts/NotoSans-Light.ttf"); }
+
+.text-1_bold {
+  font-family: "NotoSans Bold";
+  font-size: 3.8rem; }
+
+.text-1_semibold {
+  font-family: "NotoSans Semibold";
+  font-size: 3.8rem; }
+
+.text-1_regular {
+  font-family: "NotoSans Regular";
+  font-size: 3.8rem; }
+
+.text-2_semibold {
+  font-family: "NotoSans Semibold";
+  font-size: 3.4rem; }
+
+.text-2_regular {
+  font-family: "NotoSans Regular";
+  font-size: 3.4rem; }
+
+.text-3_medium {
+  font-family: "NotoSans Medium";
+  font-size: 2.2rem; }
+
+.text-3_regular {
+  font-family: "NotoSans Regular";
+  font-size: 2.2rem; }
+
+.text-3_light {
+  font-family: "NotoSans Light";
+  font-size: 2.2rem; }
+
+.text-4_regular {
+  font-family: "NotoSans Regular";
+  font-size: 1.8rem; }
+
+.text-5_regular {
+  font-family: "NotoSans Regular";
+  font-size: 1.6rem; }
+
+.text-5_light {
+  font-family: "NotoSans Light";
+  font-size: 1.6rem; }
+
+.text-5_semibold {
+  font-family: "NotoSans Semibold";
+  font-size: 1.6rem; }
+
 *,
 *::after,
 *::before {
@@ -7,7 +75,103 @@
 
 html {
   overflow-x: hidden;
-  font-size: 62.5%; }
+  font-size: 54.75%; }
   @media (min-width: 750px) {
     html {
-      font-size: 52.75%; } }
+      font-size: 62.5%; } }
+
+.no-display {
+  display: none; }
+
+section {
+  padding: 1.5rem 2rem; }
+
+article {
+  padding: 1rem 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 1rem 0; }
+
+p {
+  padding: 2rem 0; }
+
+.nav__message p {
+  padding: 2px;
+  text-align: center;
+  background-color: #E3CFB7; }
+
+.nav__mobile {
+  background-image: url("./assets/dark-bg.PNG");
+  background-size: cover;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1.75fr 4fr 1.75fr; }
+  .nav__mobile-left {
+    width: 30px;
+    margin: auto; }
+  .nav__mobile-center {
+    width: 90px;
+    margin: auto; }
+  .nav__mobile-right {
+    margin: auto; }
+    .nav__mobile-right :last-child {
+      padding-left: 5px; }
+  .nav__mobile a {
+    all: unset; }
+    .nav__mobile a:hover {
+      cursor: pointer; }
+
+.section__app {
+  background-image: url("./assets/dark-bg.PNG"); }
+  .section__app-btns {
+    margin-left: calc(50% - 19rem); }
+  .section__app h1,
+  .section__app h3 {
+    color: white;
+    letter-spacing: 1px; }
+  .section__app p {
+    color: #E0E0EC; }
+  .section__app-stats {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr; }
+    .section__app-stats img {
+      transform: rotate(15deg); }
+    .section__app-stats__div {
+      margin: auto; }
+  .section__app-features h2 {
+    color: white; }
+  .section__app-features img,
+  .section__app-features h2 {
+    display: inline; }
+  .section__app-features img {
+    margin-right: 2rem; }
+
+.section__science {
+  background-color: #ECEAEB; }
+
+.btn-white {
+  margin: 1rem;
+  padding: 0.5rem 0;
+  width: 16rem;
+  background-color: #FBFBFB;
+  border: 1.5px solid #ACBCC7;
+  color: #293843;
+  font-family: "NotoSans Bold";
+  font-size: 1.8rem; }
+  .btn-white::after {
+    content: "";
+    position: absolute;
+    margin-left: 10px;
+    width: 30px;
+    height: 25px;
+    background-image: url("./assets/icons/btnarrow-icon.PNG");
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .btn-white span {
+    margin-left: -25px; }

@@ -1,0 +1,25 @@
+.btn-white {
+    margin: 1rem;
+    padding: 0.5rem 0;
+    width: 16rem;
+    background-color: $dirtywhite-col;
+    border: 1.5px solid $lightgrey-col;
+    color: $darkblue-col;
+    font-family: "NotoSans Bold";
+    font-size: 1.8rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        margin-left: 10px;
+        width: 30px;
+        height: 25px;
+        background-image: url("./assets/icons/btnarrow-icon.PNG");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    span {
+        margin-left: -25px;
+    }
+}

@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "NotoSans Bold";
+    src: url("./assets/fonts/NotoSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans Semibold";
+    src: url("./assets/fonts/NotoSans-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans Medium";
+    src: url("./assets/fonts/NotoSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans Regular";
+    src: url("./assets/fonts/NotoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans Light";
+    src: url("./assets/fonts/NotoSans-Light.ttf");
+}
+
+.text-1_bold {
+    font-family: "NotoSans Bold";
+    font-size: 3.8rem;
+}
+
+.text-1_semibold {
+    font-family: "NotoSans Semibold";
+    font-size: 3.8rem;
+}
+
+.text-1_regular {
+    font-family: "NotoSans Regular";
+    font-size: 3.8rem;
+}
+
+.text-2_semibold {
+    font-family: "NotoSans Semibold";
+    font-size: 3.4rem;
+}
+
+.text-2_regular {
+    font-family: "NotoSans Regular";
+    font-size: 3.4rem;
+}
+
+.text-3_medium {
+    font-family: "NotoSans Medium";
+    font-size: 2.2rem;
+}
+
+.text-3_regular {
+    font-family: "NotoSans Regular";
+    font-size: 2.2rem;
+}
+
+.text-3_light {
+    font-family: "NotoSans Light";
+    font-size: 2.2rem;
+}
+
+.text-4_regular {
+    font-family: "NotoSans Regular";
+    font-size: 1.8rem;
+}
+
+.text-5_regular {
+    font-family: "NotoSans Regular";
+    font-size: 1.6rem;
+}
+
+.text-5_light {
+    font-family: "NotoSans Light";
+    font-size: 1.6rem;
+}
+
+.text-5_semibold {
+    font-family: "NotoSans Semibold";
+    font-size: 1.6rem;
+}

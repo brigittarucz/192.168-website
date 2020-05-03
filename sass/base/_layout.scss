@@ -8,9 +8,139 @@
 
 html {
     overflow-x: hidden;
-    font-size: 62.5%;
+    font-size: 54.75%;
 
     @include tablet {
-        font-size: 52.75%;
+        font-size: 62.5%;
+    }
+}
+
+.no-display {
+    display: none;
+}
+
+// -----------//// PADDINGS ////-----------
+
+section {
+    padding: 1.5rem 2rem;
+}
+
+article {
+    padding: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 1rem 0;
+}
+
+p {
+    padding: 2rem 0;
+}
+
+// -----------//// NAV MOBILE ////-----------
+
+.nav__message {
+    p {
+        padding: 2px;
+        text-align: center;
+        background-color: $lightgold-col;
+    }
+}
+
+.nav__mobile {
+    background-image: url("./assets/dark-bg.PNG");
+    background-size: cover;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1.75fr 4fr 1.75fr;
+
+    &-left {
+        width: 30px;
+        margin: auto;
+    }
+
+    &-center {
+        width: 90px;
+        margin: auto;
+    }
+
+    &-right {
+        :last-child {
+            padding-left: 5px;
+        }
+
+        margin: auto;
+    }
+
+    a {
+        all: unset;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+
+.section {
+
+    // -----------//// SECTION APP ////-----------
+
+    &__app {
+        background-image: url("./assets/dark-bg.PNG");
+
+        &-btns {
+            margin-left: calc(50% - 19rem);
+        }
+
+        h1,
+        h3 {
+            color: $basicwhite-col;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: $whitevioletish-col;
+        }
+
+        &-stats {
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: 1.5fr 2fr;
+
+            img {
+                transform: rotate(15deg);
+            }
+
+            &__div {
+                margin: auto;
+            }
+        }
+
+        &-features {
+            h2 {
+                color: $basicwhite-col;
+            }
+
+            img,
+            h2 {
+                display: inline;
+            }
+
+            img {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    // -----------//// SECTION SCIENCE ////-----------
+
+    &__science {
+        background-color: $palewhite-col;
     }
 }
