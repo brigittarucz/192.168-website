@@ -22,7 +22,7 @@
 
                 @include desktop {
                     right: -5.75rem;
-                    height: 100%vh;
+                    height: 100%;
                 }
             }
 
@@ -94,6 +94,10 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-around;
+                }
+
+                @include desktop {
+                    flex-wrap: nowrap;
                 }
             }
 

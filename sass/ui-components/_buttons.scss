@@ -22,4 +22,9 @@
     span {
         margin-left: -25px;
     }
+
+    &:hover {
+        cursor: pointer;
+        animation: scaleItemSmall 0.1s 1 forwards;
+    }
 }

@@ -1,0 +1,80 @@
+// -----------//// SVG STYLING ////-----------
+
+// svg {
+//     text {
+//         animation: animatenow 1s infinite;
+//     }
+// }
+
+// @keyframes animatenow {
+//     from {
+//         opacity: 0;
+//     }
+
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+.nav__desktop {
+    a li:hover:not(.active) {
+        cursor: pointer;
+        animation: increaseOpacityMedium 0.5s 1 forwards;
+    }
+
+    .active:hover {
+        // animation: scaleItemSmall 0.25s 1 forwards;
+        cursor: pointer;
+    }
+}
+
+@keyframes increaseOpacityMedium {
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes scaleItemSmall {
+    to {
+        transform: scale(1.05);
+    }
+}
+
+// Code from https://codepen.io/fazlurr/pen/qbWMRv
+
+$duration:10s;
+$text-color: rgba(255, 255, 255, 0.3);
+$bgr-color: #333;
+
+h1 {
+    background: #222 gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+    background-image: linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+    background-size: 200px;
+    color: $text-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation-name: shine;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    text-shadow: 0 0px 0px rgba(225, 244, 255, 0.7);
+}
+
+@keyframes shine {
+
+    0% {
+        background-position: -600px;
+    }
+
+    20% {
+        background-position: top left;
+    }
+
+    60% {
+        background-position: top right;
+    }
+
+    100% {
+        background-position: 600px;
+    }
+}

@@ -74,6 +74,44 @@
   font-family: "NotoSans Light";
   font-size: 1.6rem; }
 
+.nav__desktop a li:hover:not(.active) {
+  cursor: pointer;
+  animation: increaseOpacityMedium 0.5s 1 forwards; }
+
+.nav__desktop .active:hover {
+  cursor: pointer; }
+
+@keyframes increaseOpacityMedium {
+  to {
+    opacity: 0.8; } }
+
+@keyframes scaleItemSmall {
+  to {
+    transform: scale(1.05); } }
+
+h1 {
+  background: #222 gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+  background-image: linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+  background-size: 200px;
+  color: rgba(255, 255, 255, 0.3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation-name: shine;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  text-shadow: 0 0px 0px rgba(225, 244, 255, 0.7); }
+
+@keyframes shine {
+  0% {
+    background-position: -600px; }
+  20% {
+    background-position: top left; }
+  60% {
+    background-position: top right; }
+  100% {
+    background-position: 600px; } }
+
 *,
 *::after,
 *::before {
@@ -170,6 +208,9 @@ p {
     background-repeat: no-repeat; }
   .btn-white span {
     margin-left: -25px; }
+  .btn-white:hover {
+    cursor: pointer;
+    animation: scaleItemSmall 0.1s 1 forwards; }
 
 .nav__message p {
   padding: 2px;
@@ -232,7 +273,10 @@ p {
     .nav__desktop-right {
       margin: auto; }
       .nav__desktop-right a {
-        padding-right: 15px; } }
+        padding-right: 15px;
+        opacity: 1; }
+        .nav__desktop-right a:hover {
+          cursor: pointer; } }
 
 .section__app {
   background-image: url("./assets/dark-bg.PNG"); }
@@ -318,7 +362,7 @@ p {
 
 .section__referral {
   background-color: #1B3236;
-  color: #E3F4F6; }
+  color: #edf7f8; }
   .section__referral .text-2_semibold {
     color: white; }
   .section__referral-header-wrapper {
@@ -421,7 +465,7 @@ p {
       @media (min-width: 1200px) {
         .section__science-container .background-green {
           right: -5.75rem;
-          height: 100%vh; } }
+          height: 100%; } }
     .section__science-container .background-nature {
       position: absolute;
       left: -2rem;
@@ -462,12 +506,15 @@ p {
     .section__science article h2 {
       color: white; }
     .section__science article .text-4_regular {
-      color: #E3F4F6; }
+      color: #edf7f8; }
     @media (min-width: 750px) {
       .section__science article .science-facts {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around; } }
+    @media (min-width: 1200px) {
+      .section__science article .science-facts {
+        flex-wrap: nowrap; } }
     .section__science article .science-fact {
       margin: 7.5rem auto;
       outline: 1px solid white;

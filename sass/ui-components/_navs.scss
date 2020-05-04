@@ -94,8 +94,16 @@
         &-right {
             margin: auto;
 
+
+
             a {
                 padding-right: 15px;
+                opacity: 1;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
             }
         }
     }
