@@ -368,7 +368,10 @@ p {
       .section__referral-content form {
         max-width: 380px; }
       .section__referral-content .referral-content_4 {
-        margin-left: -50px; } }
+        margin-left: -100px; } }
+    @media (min-width: 750px) and (min-width: 750px) {
+      .section__referral-content .referral-content_4 {
+        margin: 0 auto; } }
     @media (min-width: 750px) and (min-width: 1200px) {
       .section__referral-content .referral-content_4 {
         margin-left: calc(50% - 180px); } }

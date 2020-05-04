@@ -86,11 +86,14 @@
                 .text-4_regular,
                 form {
                     max-width: 380px;
-
                 }
 
                 .referral-content_4 {
-                    margin-left: -50px;
+                    margin-left: -100px;
+
+                    @include tablet {
+                        margin: 0 auto;
+                    }
 
                     @include desktop {
                         margin-left: calc(50% - 180px);
