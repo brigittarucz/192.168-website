@@ -19,14 +19,6 @@ html {
     }
 }
 
-// .no-display-tablet {
-//     display: block;
-
-//     @include tablet {
-//         display: none;
-//     }
-// }
-
 .no-display-mobile {
     display: none;
 
@@ -43,6 +35,51 @@ html {
     font-size: 1.8rem;
 
     &:hover {
+        cursor: pointer;
+    }
+}
+
+// -----------//// MODAL STYLING ////-----------
+
+.modal-video {
+    display: block;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    .modal-content {
+        background-color: black;
+        margin: 15% auto;
+        border: 1.5px solid $darkgold-col;
+        width: 95%;
+    }
+
+    .text-4_semibold {
+        margin: auto;
+        padding-left: 15px;
+        color: $basicwhite-col;
+    }
+
+    .text-4_semibold,
+    .close {
+        display: inline-block;
+    }
+
+    .close {
+        float: right;
+        padding: 15px;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
         cursor: pointer;
     }
 }
