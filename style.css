@@ -223,16 +223,35 @@ p {
     .nav__mobile {
       display: none; } }
 
-.nav__desktop {
-  background-image: url("./assets/dark-bg.PNG");
-  background-size: cover;
-  height: 60px;
-  box-shadow: 2px 3px 6px #000000;
-  display: grid;
-  grid-template-columns: 1fr 8fr 1fr; }
-  .nav__desktop-left {
-    width: 90px;
-    margin: auto; }
+@media (min-width: 1200px) {
+  .nav__desktop {
+    background-image: url("./assets/dark-bg.PNG");
+    background-size: cover;
+    height: 60px;
+    box-shadow: 2px 3px 6px #000000;
+    display: grid;
+    grid-template-columns: 1.25fr 8fr 1.25fr; }
+    .nav__desktop-left {
+      width: 90px;
+      margin: auto; }
+    .nav__desktop-center ul {
+      list-style: none;
+      width: 800px;
+      margin: auto; }
+      .nav__desktop-center ul a {
+        all: unset; }
+      .nav__desktop-center ul li {
+        display: inline-block;
+        color: white;
+        opacity: 30%;
+        padding: 10px;
+        margin: 10px 0; }
+      .nav__desktop-center ul .active {
+        opacity: 100%; }
+    .nav__desktop-right {
+      margin: auto; }
+      .nav__desktop-right a {
+        padding-right: 15px; } }
 
 .section__app {
   background-image: url("./assets/dark-bg.PNG"); }

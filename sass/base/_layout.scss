@@ -230,16 +230,50 @@ p {
 // -----------//// NAV DESKTOP ////-----------
 
 .nav__desktop {
-    background-image: url("./assets/dark-bg.PNG");
-    background-size: cover;
-    height: 60px;
-    box-shadow: $dark-shadow;
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    @include desktop {
+        background-image: url("./assets/dark-bg.PNG");
+        background-size: cover;
+        height: 60px;
+        box-shadow: $dark-shadow;
+        display: grid;
+        grid-template-columns: 1.25fr 8fr 1.25fr;
 
-    &-left {
-        width: 90px;
-        margin: auto;
+        &-left {
+            width: 90px;
+            margin: auto;
+        }
+
+        &-center {
+            ul {
+                list-style: none;
+                width: 800px;
+                margin: auto;
+
+                a {
+                    all: unset;
+                }
+
+                li {
+                    display: inline-block;
+                    color: $basicwhite-col;
+                    opacity: 30%;
+                    padding: 10px;
+                    margin: 10px 0;
+                }
+
+                .active {
+                    opacity: 100%;
+                }
+            }
+        }
+
+        &-right {
+            margin: auto;
+
+            a {
+                padding-right: 15px;
+            }
+        }
     }
 }
 
