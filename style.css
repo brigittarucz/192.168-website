@@ -97,6 +97,12 @@ html {
     .no-display-mobile {
       display: block; } }
 
+.no-display-desktop {
+  display: block; }
+  @media (min-width: 1200px) {
+    .no-display-desktop {
+      display: none; } }
+
 .link-regular {
   all: unset;
   text-decoration: underline;
@@ -122,6 +128,14 @@ html {
     margin: 15% auto;
     border: 1.5px solid #C49B69;
     width: 95%; }
+    @media (min-width: 750px) {
+      .modal-video .modal-content {
+        margin: 15% auto;
+        width: 75%; } }
+    @media (min-width: 1200px) {
+      .modal-video .modal-content {
+        margin: 20% auto;
+        width: 65%; } }
   .modal-video .text-4_semibold {
     margin: auto;
     padding-left: 15px;
@@ -186,7 +200,8 @@ p {
   background-size: cover;
   height: 60px;
   display: grid;
-  grid-template-columns: 1.75fr 4fr 1.75fr; }
+  grid-template-columns: 1.75fr 4fr 1.75fr;
+  box-shadow: 2px 3px 6px #000000; }
   .nav__mobile-left {
     width: 30px;
     margin: auto; }
@@ -208,6 +223,17 @@ p {
     .nav__mobile {
       display: none; } }
 
+.nav__desktop {
+  background-image: url("./assets/dark-bg.PNG");
+  background-size: cover;
+  height: 60px;
+  box-shadow: 2px 3px 6px #000000;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr; }
+  .nav__desktop-left {
+    width: 90px;
+    margin: auto; }
+
 .section__app {
   background-image: url("./assets/dark-bg.PNG"); }
   @media (min-width: 750px) {
@@ -216,8 +242,25 @@ p {
       .section__app .text-1_bold,
       .section__app .text-3_medium {
         width: 380px; } }
+  @media (min-width: 1200px) {
+    .section__app {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "app-intro app-svg" "app-intro app-svg" "app-cta app-svg" "app-stats app-stats"; }
+      .section__app .section__app-intro {
+        grid-area: app-intro; }
+      .section__app .section__app-btns {
+        grid-area: app-cta; }
+      .section__app svg {
+        grid-area: app-svg; }
+      .section__app .section__app-stats {
+        grid-area: app-stats; } }
   .section__app-btns {
     margin-left: calc(50% - 19rem); }
+    @media (min-width: 1200px) {
+      .section__app-btns {
+        margin-left: 0; } }
   .section__app h1,
   .section__app h3 {
     color: white;
@@ -245,6 +288,10 @@ p {
           .section__app-stats__div h3 {
             margin-right: 25px;
             display: inline; } }
+    @media (min-width: 1200px) {
+      .section__app-stats {
+        margin-top: 0;
+        display: block; } }
   .section__app-features h2 {
     color: white; }
   .section__app-features img,
@@ -264,6 +311,9 @@ p {
         margin: 1rem;
         width: 260px;
         text-align: justify; } }
+  @media (min-width: 1200px) {
+    .section__app-features {
+      display: none; } }
 
 .section__science {
   background-color: #ECEAEB; }

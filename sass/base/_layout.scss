@@ -27,6 +27,14 @@ html {
     }
 }
 
+.no-display-desktop {
+    display: block;
+
+    @include desktop {
+        display: none;
+    }
+}
+
 .link-regular {
     all: unset;
     text-decoration: underline;
@@ -58,6 +66,16 @@ html {
         margin: 15% auto;
         border: 1.5px solid $darkgold-col;
         width: 95%;
+
+        @include tablet {
+            margin: 15% auto;
+            width: 75%;
+        }
+
+        @include desktop {
+            margin: 20% auto;
+            width: 65%;
+        }
     }
 
     .text-4_semibold {
@@ -83,6 +101,24 @@ html {
         cursor: pointer;
     }
 }
+
+// -----------//// SVG STYLING ////-----------
+
+// svg {
+//     text {
+//         animation: animatenow 1s infinite;
+//     }
+// }
+
+// @keyframes animatenow {
+//     from {
+//         opacity: 0;
+//     }
+
+//     to {
+//         opacity: 1;
+//     }
+// }
 
 // -----------//// FORM STYLING ////-----------
 
@@ -154,6 +190,7 @@ p {
     height: 60px;
     display: grid;
     grid-template-columns: 1.75fr 4fr 1.75fr;
+    box-shadow: $dark-shadow;
 
     &-left {
         width: 30px;
@@ -192,6 +229,19 @@ p {
 
 // -----------//// NAV DESKTOP ////-----------
 
+.nav__desktop {
+    background-image: url("./assets/dark-bg.PNG");
+    background-size: cover;
+    height: 60px;
+    box-shadow: $dark-shadow;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+
+    &-left {
+        width: 90px;
+        margin: auto;
+    }
+}
 
 .section {
 
@@ -209,8 +259,39 @@ p {
             }
         }
 
+        @include desktop {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "app-intro app-svg"
+                "app-intro app-svg"
+                "app-cta app-svg"
+                "app-stats app-stats";
+
+            .section__app-intro {
+                grid-area: app-intro;
+            }
+
+            .section__app-btns {
+                grid-area: app-cta;
+            }
+
+            svg {
+                grid-area: app-svg;
+            }
+
+            .section__app-stats {
+                grid-area: app-stats;
+            }
+
+        }
+
         &-btns {
             margin-left: calc(50% - 19rem);
+
+            @include desktop {
+                margin-left: 0;
+            }
         }
 
         h1,
@@ -257,6 +338,11 @@ p {
 
                 }
             }
+
+            @include desktop {
+                margin-top: 0;
+                display: block;
+            }
         }
 
         &-features {
@@ -287,6 +373,10 @@ p {
                     width: 260px;
                     text-align: justify;
                 }
+            }
+
+            @include desktop {
+                display: none;
             }
         }
     }
