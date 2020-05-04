@@ -82,10 +82,16 @@ html {
   font-size: 54.75%; }
   @media (min-width: 750px) {
     html {
+      font-size: 58.75%; } }
+  @media (min-width: 1200px) {
+    html {
       font-size: 62.5%; } }
 
-.no-display {
+.no-display-mobile {
   display: none; }
+  @media (min-width: 1200px) {
+    .no-display-mobile {
+      display: block; } }
 
 .link-regular {
   all: unset;
@@ -116,6 +122,9 @@ html {
 
 section {
   padding: 1.5rem 2rem; }
+  @media (min-width: 750px) {
+    section {
+      padding: 2rem 5.75rem; } }
 
 article {
   padding: 1rem 0; }
@@ -152,13 +161,25 @@ p {
     margin: auto; }
     .nav__mobile-right :last-child {
       padding-left: 5px; }
+      @media (min-width: 750px) {
+        .nav__mobile-right :last-child {
+          padding-left: 15px; } }
   .nav__mobile a {
     all: unset; }
     .nav__mobile a:hover {
       cursor: pointer; }
+  @media (min-width: 1200px) {
+    .nav__mobile {
+      display: none; } }
 
 .section__app {
   background-image: url("./assets/dark-bg.PNG"); }
+  @media (min-width: 750px) {
+    .section__app {
+      background-size: cover; }
+      .section__app .text-1_bold,
+      .section__app .text-3_medium {
+        width: 380px; } }
   .section__app-btns {
     margin-left: calc(50% - 19rem); }
   .section__app h1,
@@ -175,6 +196,19 @@ p {
       transform: rotate(15deg); }
     .section__app-stats__div {
       margin: auto; }
+    @media (min-width: 750px) {
+      .section__app-stats {
+        margin-top: -250px;
+        grid-template-rows: 1fr 80px; }
+        .section__app-stats img {
+          grid-column: 2/span 1; }
+        .section__app-stats__div {
+          grid-column: 1/span 2;
+          grid-row: 2/span 1;
+          margin: 0; }
+          .section__app-stats__div h3 {
+            margin-right: 25px;
+            display: inline; } }
   .section__app-features h2 {
     color: white; }
   .section__app-features img,
@@ -182,6 +216,18 @@ p {
     display: inline; }
   .section__app-features img {
     margin-right: 2rem; }
+    @media (min-width: 750px) {
+      .section__app-features img {
+        display: none; } }
+  @media (min-width: 750px) {
+    .section__app-features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      .section__app-features div {
+        margin: 1rem;
+        width: 260px;
+        text-align: justify; } }
 
 .section__science {
   background-color: #ECEAEB; }
@@ -206,6 +252,11 @@ p {
       background: url("./assets/plants-bg.png");
       width: 55%;
       height: 95%; }
+    @media (min-width: 750px) {
+      .section__science-container .text-2_semibold,
+      .section__science-container .text-4_regular {
+        width: 380px;
+        margin: auto; } }
     .section__science-container article {
       padding: 4rem 0;
       position: relative;
@@ -215,6 +266,11 @@ p {
         color: white; }
       .section__science-container article .text-4_regular {
         color: #E3F4F6; }
+      @media (min-width: 750px) {
+        .section__science-container article .science-facts {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; } }
       .section__science-container article .science-fact {
         margin: 7.5rem auto;
         outline: 1px solid white;
@@ -224,6 +280,9 @@ p {
         height: 25rem;
         padding: 3rem;
         position: relative; }
+        @media (min-width: 750px) {
+          .section__science-container article .science-fact {
+            margin: 40px; } }
         .section__science-container article .science-fact .fact-icon {
           z-index: 3;
           position: absolute;
@@ -249,22 +308,59 @@ p {
     background-image: url("./assets/marble-bg.png");
     background-position: bottom;
     background-size: cover;
-    margin: -2rem;
+    margin: -2rem -5.75rem;
     padding: 6rem 4rem; }
+    @media (min-width: 750px) {
+      .section__referral-header-wrapper {
+        padding: 14rem 4rem; } }
   .section__referral-header-content {
     border: 1px solid white;
     outline-offset: 1rem;
     padding: 1rem;
     color: white;
     text-align: center; }
+    @media (min-width: 750px) {
+      .section__referral-header-content {
+        width: 400px;
+        margin: auto; } }
     .section__referral-header-content * {
       text-shadow: 2px 3px 6px #000000;
       padding: 0; }
+  @media (min-width: 750px) {
+    .section__referral-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, fit-content(150px));
+      grid-template-areas: "referral-1 referral-1 referral-4 referral-4" "referral-2 referral-2 referral-4 referral-4" "referral-3 referral-3 referral-4 referral-4" "discount-1 discount-2 discount-3 none"; }
+      .section__referral-content .discount_1 {
+        grid-area: discount-1; }
+      .section__referral-content .discount_2 {
+        grid-area: discount-2; }
+      .section__referral-content .discount_3 {
+        grid-area: discount-3; }
+      .section__referral-content .referral-content_1 {
+        grid-area: referral-1; }
+      .section__referral-content .referral-content_2 {
+        grid-area: referral-2; }
+      .section__referral-content .referral-content_3 {
+        grid-area: referral-3; }
+      .section__referral-content .referral-content_4 {
+        grid-area: referral-4; }
+      .section__referral-content .text-2_semibold,
+      .section__referral-content .text-4_regular,
+      .section__referral-content form {
+        width: 400px; }
+      .section__referral-content .referral-content_4 {
+        margin-left: -50px; } }
   .section__referral .discount-card {
     width: 250px;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 4rem 1fr; }
+    @media (min-width: 750px) {
+      .section__referral .discount-card {
+        width: 250px;
+        margin: auto; } }
     .section__referral .discount-card .text-5_light {
       grid-column: 1/span 1; }
     .section__referral .discount-card img {

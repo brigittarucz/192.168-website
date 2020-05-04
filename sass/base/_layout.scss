@@ -11,12 +11,28 @@ html {
     font-size: 54.75%;
 
     @include tablet {
+        font-size: 58.75%;
+    }
+
+    @include desktop {
         font-size: 62.5%;
     }
 }
 
-.no-display {
+// .no-display-tablet {
+//     display: block;
+
+//     @include tablet {
+//         display: none;
+//     }
+// }
+
+.no-display-mobile {
     display: none;
+
+    @include desktop {
+        display: block;
+    }
 }
 
 .link-regular {
@@ -31,7 +47,7 @@ html {
     }
 }
 
-// -----------//// PADDINGS ////-----------
+// -----------//// FORM STYLING ////-----------
 
 .form-group {
     margin-top: 1.5rem;
@@ -62,6 +78,10 @@ html {
 
 section {
     padding: 1.5rem 2rem;
+
+    @include tablet {
+        padding: 2rem 5.75rem;
+    }
 }
 
 article {
@@ -111,6 +131,10 @@ p {
     &-right {
         :last-child {
             padding-left: 5px;
+
+            @include tablet {
+                padding-left: 15px;
+            }
         }
 
         margin: auto;
@@ -123,7 +147,13 @@ p {
             cursor: pointer;
         }
     }
+
+    @include desktop {
+        display: none;
+    }
 }
+
+// -----------//// NAV DESKTOP ////-----------
 
 
 .section {
@@ -132,6 +162,15 @@ p {
 
     &__app {
         background-image: url("./assets/dark-bg.PNG");
+
+        @include tablet {
+            background-size: cover;
+
+            .text-1_bold,
+            .text-3_medium {
+                width: 380px;
+            }
+        }
 
         &-btns {
             margin-left: calc(50% - 19rem);
@@ -147,6 +186,7 @@ p {
             color: $whitevioletish-col;
         }
 
+
         &-stats {
             padding: 2rem 0;
             display: grid;
@@ -158,6 +198,27 @@ p {
 
             &__div {
                 margin: auto;
+            }
+
+            @include tablet {
+                margin-top: -250px;
+                grid-template-rows: 1fr 80px;
+
+                img {
+                    grid-column: 2/span 1;
+                }
+
+                &__div {
+                    grid-column: 1/span 2;
+                    grid-row: 2/span 1;
+                    margin: 0;
+
+                    h3 {
+                        margin-right: 25px;
+                        display: inline;
+                    }
+
+                }
             }
         }
 
@@ -173,6 +234,22 @@ p {
 
             img {
                 margin-right: 2rem;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                div {
+                    margin: 1rem;
+                    width: 260px;
+                    text-align: justify;
+                }
             }
         }
     }
@@ -209,6 +286,15 @@ p {
                 height: 95%;
             }
 
+            @include tablet {
+
+                .text-2_semibold,
+                .text-4_regular {
+                    width: 380px;
+                    margin: auto;
+                }
+            }
+
 
             article {
                 padding: 4rem 0;
@@ -225,6 +311,14 @@ p {
                     color: $whiteblueish-col;
                 }
 
+                .science-facts {
+                    @include tablet {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                    }
+                }
+
                 .science-fact {
                     margin: 7.5rem auto;
                     outline: 1px solid $basicwhite-col;
@@ -234,6 +328,10 @@ p {
                     height: 25rem;
                     padding: 3rem;
                     position: relative;
+
+                    @include tablet {
+                        margin: 40px;
+                    }
 
                     .fact-icon {
                         z-index: 3;
@@ -276,8 +374,12 @@ p {
             background-image: url("./assets/marble-bg.png");
             background-position: bottom;
             background-size: cover;
-            margin: -2rem;
+            margin: -2rem -5.75rem;
             padding: 6rem 4rem;
+
+            @include tablet {
+                padding: 14rem 4rem;
+            }
         }
 
         &-header-content {
@@ -287,9 +389,69 @@ p {
             color: $basicwhite-col;
             text-align: center;
 
+
+            @include tablet {
+                width: 400px;
+                margin: auto;
+            }
+
             * {
                 text-shadow: $dark-shadow;
                 padding: 0;
+            }
+        }
+
+        &-content {
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, fit-content(150px));
+                grid-template-areas: "referral-1 referral-1 referral-4 referral-4"
+                    "referral-2 referral-2 referral-4 referral-4"
+                    "referral-3 referral-3 referral-4 referral-4"
+                    "discount-1 discount-2 discount-3 none";
+
+                .discount {
+                    &_1 {
+                        grid-area: discount-1;
+                    }
+
+                    &_2 {
+                        grid-area: discount-2;
+                    }
+
+                    &_3 {
+                        grid-area: discount-3;
+                    }
+                }
+
+                .referral-content {
+                    &_1 {
+                        grid-area: referral-1;
+                    }
+
+                    &_2 {
+                        grid-area: referral-2;
+                    }
+
+                    &_3 {
+                        grid-area: referral-3;
+                    }
+
+                    &_4 {
+                        grid-area: referral-4;
+                    }
+                }
+
+                .text-2_semibold,
+                .text-4_regular,
+                form {
+                    width: 380px;
+                }
+
+                .referral-content_4 {
+                    margin-left: -50px;
+                }
             }
         }
 
@@ -298,6 +460,11 @@ p {
             display: grid;
             grid-template-columns: 3fr 1fr;
             grid-template-rows: 4rem 1fr;
+
+            @include tablet {
+                width: 250px;
+                margin: auto;
+            }
 
             .text-5_light {
                 grid-column: 1/span 1
