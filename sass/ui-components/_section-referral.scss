@@ -86,11 +86,24 @@
                 .text-4_regular,
                 form {
                     width: 380px;
+
                 }
 
                 .referral-content_4 {
                     margin-left: -50px;
+
+                    @include desktop {
+                        margin-left: calc(50% - 180px);
+                    }
                 }
+            }
+
+            @include desktop {
+                grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+                grid-template-areas: "referral-1 discount-1 referral-4 referral-4"
+                    "referral-2 discount-2 referral-4 referral-4"
+                    "referral-3 discount-3 referral-4 referral-4"
+                    "none none none none";
             }
         }
 

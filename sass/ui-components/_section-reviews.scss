@@ -1,0 +1,46 @@
+.section {
+
+    // -----------//// SECTION REVIEWS ////-----------
+
+    &__reviews {
+        background-color: $palewhite-col;
+
+        h2 {
+            color: $impureblack-col;
+        }
+
+        .review-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 6.75rem;
+        }
+
+        .review {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            background-color: $impureblack-col;
+            margin: 10px;
+            color: $palewhite-col;
+
+            &-gliph {
+                margin-top: -10px;
+                width: 30px;
+                height: 140px;
+                background-image: url("./assets/review-gliph.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            p {
+                margin-top: -100px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
