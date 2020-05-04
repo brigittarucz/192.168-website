@@ -1,0 +1,136 @@
+.section {
+    // -----------//// SECTION REFERRAL ////-----------
+
+    &__referral {
+        background-color: #1B3236;
+        color: $whiteblueish-col;
+
+        .text-2_semibold {
+            color: $basicwhite-col;
+        }
+
+        &-header-wrapper {
+            background-image: url("./assets/marble-bg.png");
+            background-position: bottom;
+            background-size: cover;
+            margin: -2rem -5.75rem;
+            padding: 6rem 4rem;
+
+            @include tablet {
+                padding: 14rem 4rem;
+            }
+        }
+
+        &-header-content {
+            border: 1px solid $basicwhite-col;
+            outline-offset: 1rem;
+            padding: 1rem;
+            color: $basicwhite-col;
+            text-align: center;
+
+
+            @include tablet {
+                width: 400px;
+                margin: auto;
+            }
+
+            * {
+                text-shadow: $dark-shadow;
+                padding: 0;
+            }
+        }
+
+        &-content {
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, fit-content(150px));
+                grid-template-areas: "referral-1 referral-1 referral-4 referral-4"
+                    "referral-2 referral-2 referral-4 referral-4"
+                    "referral-3 referral-3 referral-4 referral-4"
+                    "discount-1 discount-2 discount-3 none";
+
+                .discount {
+                    &_1 {
+                        grid-area: discount-1;
+                    }
+
+                    &_2 {
+                        grid-area: discount-2;
+                    }
+
+                    &_3 {
+                        grid-area: discount-3;
+                    }
+                }
+
+                .referral-content {
+                    &_1 {
+                        grid-area: referral-1;
+                    }
+
+                    &_2 {
+                        grid-area: referral-2;
+                    }
+
+                    &_3 {
+                        grid-area: referral-3;
+                    }
+
+                    &_4 {
+                        grid-area: referral-4;
+                    }
+                }
+
+                .text-2_semibold,
+                .text-4_regular,
+                form {
+                    width: 380px;
+                }
+
+                .referral-content_4 {
+                    margin-left: -50px;
+                }
+            }
+        }
+
+        .discount-card {
+            width: 250px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 4rem 1fr;
+
+            @include tablet {
+                width: 250px;
+                margin: auto;
+            }
+
+            .text-5_light {
+                grid-column: 1/span 1
+            }
+
+            img {
+                width: 100%;
+                grid-row: 2/span 1;
+                grid-column: 1/span 1;
+            }
+
+            .text-3_medium {
+                grid-row: 2/span 1;
+                grid-column: 2/span 1;
+            }
+
+            * {
+                display: inline-block;
+                margin: auto;
+            }
+        }
+
+        form {
+
+            button {
+                margin-left: calc(50% - 8rem);
+            }
+        }
+    }
+}

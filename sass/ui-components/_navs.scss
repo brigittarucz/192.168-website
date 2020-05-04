@@ -1,0 +1,102 @@
+// -----------//// NAV MOBILE ////-----------
+
+.nav__message {
+    p {
+        padding: 2px;
+        text-align: center;
+        background-color: $lightgold-col;
+    }
+}
+
+.nav__mobile {
+    background-image: url("./assets/dark-bg.PNG");
+    background-size: cover;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1.75fr 4fr 1.75fr;
+    box-shadow: $dark-shadow;
+
+    &-left {
+        width: 30px;
+        margin: auto;
+    }
+
+    &-center {
+        width: 90px;
+        margin: auto;
+    }
+
+    &-right {
+        :last-child {
+            padding-left: 5px;
+
+            @include tablet {
+                padding-left: 15px;
+            }
+        }
+
+        margin: auto;
+    }
+
+    a {
+        all: unset;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @include desktop {
+        display: none;
+    }
+}
+
+// -----------//// NAV DESKTOP ////-----------
+
+.nav__desktop {
+    @include desktop {
+        background-image: url("./assets/dark-bg.PNG");
+        background-size: cover;
+        height: 60px;
+        box-shadow: $dark-shadow;
+        display: grid;
+        grid-template-columns: 1.25fr 8fr 1.25fr;
+
+        &-left {
+            width: 90px;
+            margin: auto;
+        }
+
+        &-center {
+            ul {
+                list-style: none;
+                width: 800px;
+                margin: auto;
+
+                a {
+                    all: unset;
+                }
+
+                li {
+                    display: inline-block;
+                    color: $basicwhite-col;
+                    opacity: 30%;
+                    padding: 10px;
+                    margin: 10px 0;
+                }
+
+                .active {
+                    opacity: 100%;
+                }
+            }
+        }
+
+        &-right {
+            margin: auto;
+
+            a {
+                padding-right: 15px;
+            }
+        }
+    }
+}

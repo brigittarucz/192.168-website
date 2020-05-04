@@ -1,0 +1,139 @@
+.section {
+    // -----------//// SECTION APP ////-----------
+
+    &__app {
+        background-image: url("./assets/dark-bg.PNG");
+
+        @include tablet {
+            background-size: cover;
+
+            .text-1_bold,
+            .text-3_medium {
+                width: 380px;
+            }
+        }
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            grid-template-rows: auto;
+            grid-gap: 30px;
+            grid-template-areas: "app-intro app-svg"
+                "app-intro app-svg"
+                "app-cta app-svg"
+                "app-stats app-stats";
+
+            .section__app-intro {
+                grid-area: app-intro;
+            }
+
+            .section__app-btns {
+                grid-area: app-cta;
+            }
+
+            svg {
+                grid-area: app-svg;
+            }
+
+            .section__app-stats {
+                grid-area: app-stats;
+            }
+
+        }
+
+        &-btns {
+            margin-left: calc(50% - 19rem);
+
+            @include desktop {
+                margin-left: 0;
+            }
+        }
+
+        h1,
+        h3 {
+            color: $basicwhite-col;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: $whitevioletish-col;
+        }
+
+
+        &-stats {
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: 1.5fr 2fr;
+
+            img {
+                transform: rotate(15deg);
+            }
+
+            &__div {
+                margin: auto;
+            }
+
+            @include tablet {
+                margin-top: -250px;
+                grid-template-rows: 1fr 80px;
+
+                img {
+                    grid-column: 2/span 1;
+                }
+
+                &__div {
+                    grid-column: 1/span 2;
+                    grid-row: 2/span 1;
+                    margin: 0;
+
+                    h3 {
+                        margin-right: 25px;
+                        display: inline;
+                    }
+
+                }
+            }
+
+            @include desktop {
+                margin-top: 0;
+                display: block;
+            }
+        }
+
+        &-features {
+            h2 {
+                color: $basicwhite-col;
+            }
+
+            img,
+            h2 {
+                display: inline;
+            }
+
+            img {
+                margin-right: 2rem;
+
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                div {
+                    margin: 1rem;
+                    width: 260px;
+                    text-align: justify;
+                }
+            }
+
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+
+}
