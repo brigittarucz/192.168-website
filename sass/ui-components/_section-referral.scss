@@ -43,7 +43,7 @@
         &-content {
             @include tablet {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(4, minmax(max-content, 1fr));
                 grid-template-rows: repeat(4, fit-content(150px));
                 grid-template-areas: "referral-1 referral-1 referral-4 referral-4"
                     "referral-2 referral-2 referral-4 referral-4"
@@ -85,7 +85,7 @@
                 .text-2_semibold,
                 .text-4_regular,
                 form {
-                    width: 380px;
+                    max-width: 380px;
 
                 }
 
