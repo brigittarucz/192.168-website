@@ -3,6 +3,10 @@
 
     &__science {
 
+        .text-4_regular {
+            font-weight: 200;
+        }
+
         background-color: $palewhite-col;
 
         &-container {
@@ -29,7 +33,7 @@
             .background-nature {
                 position: absolute;
                 left: -2rem;
-                top: 30;
+                top: 6vh;
                 z-index: 0;
                 background: url("./assets/plants-bg.png");
                 width: 55%;
@@ -68,7 +72,7 @@
 
             .text-2_semibold,
             .text-4_regular {
-                width: 380px;
+                width: 450px;
                 margin: auto;
             }
         }
@@ -90,6 +94,8 @@
             }
 
             .science-facts {
+                margin-top: 1.5rem;
+
                 @include tablet {
                     display: flex;
                     flex-wrap: wrap;

@@ -180,9 +180,7 @@ article {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   padding: 2rem 0 1rem 0; }
 
 p {
@@ -449,6 +447,8 @@ p {
 
 .section__science {
   background-color: #ECEAEB; }
+  .section__science .text-4_regular {
+    font-weight: 200; }
   .section__science-container {
     margin: 6.75rem 0;
     max-height: 1500px;
@@ -469,7 +469,7 @@ p {
     .section__science-container .background-nature {
       position: absolute;
       left: -2rem;
-      top: 30;
+      top: 6vh;
       z-index: 0;
       background: url("./assets/plants-bg.png");
       width: 55%;
@@ -496,7 +496,7 @@ p {
   @media (min-width: 750px) {
     .section__science .text-2_semibold,
     .section__science .text-4_regular {
-      width: 380px;
+      width: 450px;
       margin: auto; } }
   .section__science article {
     padding: 4rem 0;
@@ -507,14 +507,16 @@ p {
       color: white; }
     .section__science article .text-4_regular {
       color: #edf7f8; }
-    @media (min-width: 750px) {
-      .section__science article .science-facts {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around; } }
-    @media (min-width: 1200px) {
-      .section__science article .science-facts {
-        flex-wrap: nowrap; } }
+    .section__science article .science-facts {
+      margin-top: 1.5rem; }
+      @media (min-width: 750px) {
+        .section__science article .science-facts {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; } }
+      @media (min-width: 1200px) {
+        .section__science article .science-facts {
+          flex-wrap: nowrap; } }
     .section__science article .science-fact {
       margin: 7.5rem auto;
       outline: 1px solid white;
@@ -567,8 +569,9 @@ p {
       background-image: url("./assets/review-gliph.png");
       background-size: contain;
       background-repeat: no-repeat; }
-    .section__reviews .review p {
-      margin-top: -100px; }
+    .section__reviews .review h5 {
+      margin-top: -90px;
+      font-weight: 100; }
     .section__reviews .review img {
       width: 100%; }
 
