@@ -17,6 +17,10 @@
             -webkit-text-fill-color: transparent;
         }
 
+        button a {
+            all: unset;
+        }
+
         @include tablet {
             background-size: cover;
 
