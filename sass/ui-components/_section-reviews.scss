@@ -15,18 +15,33 @@
             justify-content: space-around;
             align-items: center;
             margin-bottom: 6.75rem;
+
+            &:hover article {
+                filter: blur(2px);
+                transform: scale(0.95);
+                opacity: 0.6;
+            }
+
+            &:hover article:hover {
+                filter: blur(0px);
+                transform: scale(1.05);
+                opacity: 1;
+            }
         }
 
         .review {
-            width: 200px;
-            height: 200px;
+            width: 240px;
+            height: 240px;
             padding: 20px;
-            background-color: $impureblack-col;
-            margin: 10px;
-            color: $palewhite-col;
+            margin: 2rem;
+            color: $impureblack-col;
+            box-shadow: $light-shadow;
+            outline-offset: 1rem;
+            padding: 1rem;
 
             &-gliph {
                 margin-top: -10px;
+                margin-bottom: 10px;
                 width: 30px;
                 height: 140px;
                 background-image: url("./assets/review-gliph.png");

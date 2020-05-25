@@ -4,6 +4,19 @@
     &__app {
         background-image: url("./assets/dark-bg.PNG");
 
+        .text-3_light {
+            font-weight: 100;
+            font-size: 2rem;
+        }
+
+        .text-2_regular {
+            color: transparent;
+            background: -webkit-linear-gradient(#eee, #62C09C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         @include tablet {
             background-size: cover;
 
@@ -136,4 +149,40 @@
         }
     }
 
+}
+
+@keyframes translateUp_1 {
+    from {
+        opacity: 0;
+        transform: translate(1664px, 759px);
+    }
+
+    to {
+        opacity: .95;
+        transform: translate(1664px, 729px);
+    }
+}
+
+@keyframes translateUp_2 {
+    from {
+        opacity: 0;
+        transform: translate(1519px, 312px);
+    }
+
+    to {
+        opacity: .95;
+        transform: translate(1519px, 272px);
+    }
+}
+
+@keyframes translateUp_3 {
+    from {
+        opacity: 0;
+        transform: translate(538px, 744px);
+    }
+
+    to {
+        opacity: .95;
+        transform: translate(538px, 704px);
+    }
 }

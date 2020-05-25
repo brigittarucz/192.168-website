@@ -19,6 +19,10 @@ html {
     }
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .no-display-mobile {
     display: none;
 
